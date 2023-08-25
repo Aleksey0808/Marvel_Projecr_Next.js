@@ -1,0 +1,29 @@
+.nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .links {
+      font-size: 24px;
+      font-weight: 700
+    }
+  
+    a {
+      display: inline-flex;
+      align-items: center;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  
+      &.active,
+      &:hover {
+        color: #9F0013;
+      }
+    }
+
+    .delimiter {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
