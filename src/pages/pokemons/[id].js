@@ -3,7 +3,7 @@ import PokemonInfo from "@/components/PokemonInfo";
 
 
 export const getServerSideProps = async (context) => {
-  const { name } = context.params;
+  const { name, url } = context.params;
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   const data = await response.json();
     

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import styles from '../../styles//Pokemons.module.scss'
 
 
 export const getStaticProps = async () => {
@@ -29,9 +30,9 @@ console.log(pokemons.results);
       </Head>
       
       <ul>
-        {pokemons && pokemons.results.map(({name}) => (
+        {pokemons && pokemons.results.map(({name, url}) => (
             <li key={name}>
-            <Link href={`/pokemon/${name}`}>{name}</Link>
+            <Link className={styles.link} href={`/pokemon/${name}`}>{name}</Link>
           </li>
         ))}
       </ul>
