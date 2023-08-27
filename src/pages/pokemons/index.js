@@ -32,7 +32,7 @@ console.log(pokemons.results);
       <ul>
         {pokemons && pokemons.results.map(({name, url}) => (
             <li key={name}>
-            <Link className={styles.link} href={`/pokemon/${name}`}>{name}</Link>
+            <Link className={styles.link} href={`/pokemons/${name}`}>{name}</Link>
           </li>
         ))}
       </ul>
