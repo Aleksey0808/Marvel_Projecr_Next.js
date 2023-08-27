@@ -1,21 +1,24 @@
 import Image from "next/image";
+import styles from "../styles/PokemonInfo.module.scss";
 
 const PokemonInfo = ({pokemon}) => {
-    console.log(pokemon.sprites.back_default);
-    const src = pokemon.sprites.back_default;
-    // const { name, email, address } = contact || {};
-    // const { street, suite, city, zipcode } = address || {};
+    console.log(pokemon);
+    const { name, abilities, weight } = pokemon || {};
+    const { front_default } = pokemon.sprites || {};
+    const src = front_default;
 
-    // if(!contact) {
-    //     return <Heading tag="h3" text="Contact is empty" />
-    // }
+    const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
+    const pokemonAbilyty = abilities.map(ability => ability.ability.name)
     return (
         <>
-        <h1>{pokemon.name}</h1>
+        <div className={styles.container}>
+        <h1 className={styles.name}>Name: {newName(name)}</h1>
+        <p>Abilitys: {pokemonAbilyty}</p>
+        <p>Weight: {weight}</p>
         <Image
-        loader={() => src} src={src} width={500} height={500} alt={pokemon.name}
+        loader={() => src} src={src} width={300} height={300} alt={pokemon.name}
         ></Image>
-       
+       </div>
         </>
     )
 };

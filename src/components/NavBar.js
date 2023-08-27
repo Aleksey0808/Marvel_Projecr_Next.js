@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 
 const navigation = [
-    { id: 1, title: 'Characters', path: '/' },
-    { id: 2, title: 'Pokemons', path: '/pokemons' },
+    { id: 1, title: 'Pokemons', path: '/pokemons' },
+    { id: 2, title: 'Types', path: '/types' },
   ];
 
 const NavBar = () => {

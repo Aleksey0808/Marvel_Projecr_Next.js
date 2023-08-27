@@ -5,7 +5,6 @@ import styles from '../../styles//Pokemons.module.scss'
 
 export const getStaticProps = async () => {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
- 
     const data = await response.json();
 
     if (!data) {
@@ -21,8 +20,8 @@ export const getStaticProps = async () => {
         };
 }
 
-const Comics = ({pokemons}) => {
-console.log(pokemons.results);
+const Pokemons = ({pokemons}) => {
+const { results } = pokemons;
     return (
       <>
       <Head>
@@ -30,15 +29,21 @@ console.log(pokemons.results);
       </Head>
       
       <ul>
-        {pokemons && pokemons.results.map(({name, url}) => (
-            <li key={name}>
-            <Link className={styles.link} href={`/pokemons/${name}`}>{name}</Link>
+        {results && results.map(({name}) => {
+
+          let str = name;
+          const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+          return (
+            <li key={name} className={styles.list}>
+            <Link className={styles.link} href={`/pokemons/${name}`}>{newName(str)}</Link>
           </li>
-        ))}
+          )
+        })}
       </ul>
       </>
     );
 };
 
-export default Comics;
+export default Pokemons;
 
