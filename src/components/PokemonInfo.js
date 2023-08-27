@@ -1,7 +1,8 @@
-
+import Image from "next/image";
 
 const PokemonInfo = ({pokemon}) => {
-    console.log(pokemon);
+    console.log(pokemon.sprites.back_default);
+    const src = pokemon.sprites.back_default;
     // const { name, email, address } = contact || {};
     // const { street, suite, city, zipcode } = address || {};
 
@@ -11,14 +12,10 @@ const PokemonInfo = ({pokemon}) => {
     return (
         <>
         <h1>{pokemon.name}</h1>
-        {/* <div>
-            <strong>Email:</strong>
-            {email}
-        </div>
-        <div>
-            <strong>Address:</strong>
-            {`${street}, ${suite}, ${city}, ${zipcode}`}
-        </div> */}
+        <Image
+        loader={() => src} src={src} width={500} height={500} alt={pokemon.name}
+        ></Image>
+       
         </>
     )
 };
