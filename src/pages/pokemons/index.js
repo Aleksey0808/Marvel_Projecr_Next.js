@@ -4,7 +4,7 @@ import styles from '../../styles//Pokemons.module.scss'
 
 
 export const getStaticProps = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=30&offset=30');
     const data = await response.json();
 
     if (!data) {
@@ -21,6 +21,7 @@ export const getStaticProps = async () => {
 }
 
 const Pokemons = ({pokemons}) => {
+  console.log(pokemons);
 const { results } = pokemons;
     return (
       <>
@@ -36,7 +37,8 @@ const { results } = pokemons;
 
           return (
             <li key={name} className={styles.list}>
-            <Link className={styles.link} href={`/pokemons/${name}`}>{newName(str)}</Link>
+            {newName(str)}  
+            <Link className={styles.link} href={`/pokemons/${name}`}><button className={styles.btn}>Info</button></Link>
           </li>
           )
         })}
