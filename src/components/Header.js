@@ -1,10 +1,11 @@
 import NavBar from "./NavBar";
 import styles from '../styles/Header.module.scss'
+import Link from 'next/link';
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div><p><span className={styles.logo}>Marvel</span> information portal</p></div>
+            <Link href='/'><span className={styles.logoRed}>Marvel</span> information portal</Link>
             <NavBar />
         </header>
     );
