@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 }
 
 const Types = ({types}) => {
-  console.log(types);
+  // console.log(types);
 const { results } = types;
     return (
       <>
@@ -34,6 +34,8 @@ const { results } = types;
 
           let str = name;
           const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
+          console.log(str)
+          console.log(newName(str))
 
           return (
             <li key={name} className={styles.list}>

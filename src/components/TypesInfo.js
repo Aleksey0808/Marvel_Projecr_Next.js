@@ -1,33 +1,23 @@
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/TypesInfo.module.scss";
 import { useRouter } from 'next/navigation';
 
 const TypesInfo = ({type}) => {
     // console.log(type);
     const router = useRouter();
-    console.log(type);
-  
-    // const { front_default } = type.sprites || {};
-    // const src = front_default;
 
-    // const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
-    // const typeAbilyty = abilities.map(ability => ability.ability.name)
     return (
         <>
-        <button className={styles.btn} type="button" onClick={() => router.push('/types')}> === Go back</button>   
+        <button className={styles.btn} type="button" onClick={() => router.back()}> &#8592; Go back</button>   
         {/* <div className={styles.container}> */}
             <ul className={styles.list}>
             {type && type.map(({pokemon}) => {
-                <li key={pokemon.name}>{pokemon.name}</li>
+                console.log(pokemon)
+                return(
+                    <Link className={styles.link} href={`/pokemons/${pokemon.name}`}><li key={pokemon.name}>{pokemon.name}</li></Link>
+                    )
             })}
             </ul>
-        {/* <h1 className={styles.name}>Name: {newName(name)}</h1> */}
-        {/* <p>Abilitys: {typeAbilyty}</p> */}
-        {/* <p>Weight: {weight}</p> */}
-        {/* <Image
-        loader={() => src} src={src} width={300} height={300} alt={type.name}
-        ></Image> */}
-       {/* </div> */}
         </>
     )
 };

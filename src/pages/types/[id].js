@@ -19,7 +19,7 @@ export const getServerSideProps = async (context) => {
 }
 
 const Type = ({type}) => {
-    console.log(type.pokemon)
+    // console.log(type.pokemon)
     return (
         <>
         <Head>

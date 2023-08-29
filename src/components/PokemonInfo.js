@@ -13,7 +13,7 @@ const PokemonInfo = ({pokemon}) => {
     const pokemonAbilyty = abilities.map(ability => ability.ability.name)
     return (
         <>
-        <button className={styles.btn} type="button" onClick={() => router.push('/pokemons')}> === Go back</button>   
+        <button className={styles.btn} type="button" onClick={() => router.back()}> &#8592; Go back</button>   
         <div className={styles.container}>
         <h1 className={styles.name}>Name: {newName(name)}</h1>
         <p>Abilitys: {pokemonAbilyty}</p>
