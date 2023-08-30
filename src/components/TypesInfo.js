@@ -21,14 +21,21 @@ const TypesInfo = ({ type }) => {
         {type &&
           type.map(({ pokemon }) => {
             // console.log(pokemon)
+            const { name } = pokemon;
+            let str = name;
+            const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
+
             return (
+              <li key={name} className={styles.item}>{newName(str)}
               <Link
-                key={pokemon.name}
+                key={name}
                 className={styles.link}
-                href={`/pokemons/${pokemon.name}`}
+                href={`/pokemons/${name}`}
               >
-                <li key={pokemon.name}>{pokemon.name}</li>
+                
+                <button className={styles.btn}>Info</button>
               </Link>
+              </li>
             )
           })}
       </ul>
