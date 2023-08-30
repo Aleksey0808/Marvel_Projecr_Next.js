@@ -1,102 +1,102 @@
 [
   {
     "name": "Bug",
-    "src": "/Bug.jpg",
+    "src": "/images/Bug.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Dark",
-    "src": "/Dark.jpg",
+    "src": "/images/Dark.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Dragon",
-    "src": "/Dragon.jpg",
+    "src": "/images/Dragon.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Electric",
-    "src": "/Electric.jpg",
+    "src": "/images/Electric.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Fairy",
-    "src": "/Fairy.jpg",
+    "src": "/images/Fairy.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Fighting",
-    "src": "/Fighting.jpg",
+    "src": "/images/Fighting.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Fire",
-    "src": "/Fire.jpg",
+    "src": "/images/Fire.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Flying",
-    "src": "/Flying.jpg",
+    "src": "/images/Flying.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Ghost",
-    "src": "/Ghost.jpg",
+    "src": "/images/Ghost.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Grass",
-    "src": "/Grass.jpg",
+    "src": "/images/Grass.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Ground",
-    "src": "/Ground.jpg",
+    "src": "/images/Ground.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Ice",
-    "src": "/Ice.jpg",
+    "src": "/images/Ice.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Normal",
-    "src": "/Normal.jpg",
+    "src": "/images/Normal.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Poison",
-    "src": "/Poison.jpg",
+    "src": "/images/Poison.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Psychic",
-    "src": "/Psychic.jpg",
+    "src": "/images/Psychic.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Rock",
-    "src": "/Rock.jpg",
+    "src": "/images/Rock.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Shadow",
-    "src": "/Shadow.jpg",
+    "src": "/images/Shadow.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Steel",
-    "src": "/Steel.jpg",
+    "src": "/images/Steel.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Unknown",
-    "src": "/Unknown.jpg",
+    "src": "/images/Unknown.jpg",
     "type": "image/jpg"
   },
   {
     "name": "Water",
-    "src": "/Water.jpg",
+    "src": "/images/Water.jpg",
     "type": "image/jpg"
   }
 ]
