@@ -30,7 +30,7 @@ const Types = ({ types }) => {
         <title>Types</title>
       </Head>
 
-      <ul>
+      <ul className={styles.list}>
         {results &&
           results.map(({ name }) => {
             let str = name
@@ -39,7 +39,7 @@ const Types = ({ types }) => {
             // console.log(newName(str) === icon.src)
 
             return (
-              <li key={name} className={styles.list}>
+              <li key={name} className={styles.item}>
                 {newName(str)}
                 {icon.map(({ src, name }) => {
                   // console.log(src)

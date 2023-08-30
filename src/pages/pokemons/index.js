@@ -4,7 +4,9 @@ import styles from '../../styles//Pokemons.module.scss'
 import { useState } from "react";
 
 export const getStaticProps = async () => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=10&offset=5`);
+
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=35&offset=5`);
+
     const data = await response.json();
 
     if (!data) {
@@ -39,14 +41,15 @@ const loadMore = async () => {
         <title>Pokemons</title>
       </Head>
       
-      <ul>
+      <ul className={styles.list}>
+
         {morePokemon && morePokemon.map(({name}) => {
 
           let str = name;
           const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
 
           return (
-            <li key={name} className={styles.list}>
+            <li key={name} className={styles.item}>
             {newName(str)}  
             <Link className={styles.link} href={`/pokemons/${name}`}><button className={styles.btn}>Info</button></Link>
           </li>
@@ -57,6 +60,7 @@ const loadMore = async () => {
       </>
     );
 };
+
 
 export default Pokemons;
 
