@@ -4,7 +4,9 @@ import styles from '../../styles//Pokemons.module.scss'
 import { useState } from "react";
 
 export const getStaticProps = async () => {
+
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=35&offset=5`);
+
     const data = await response.json();
 
     if (!data) {
@@ -40,6 +42,7 @@ const loadMore = async () => {
       </Head>
       
       <ul className={styles.list}>
+
         {morePokemon && morePokemon.map(({name}) => {
 
           let str = name;
