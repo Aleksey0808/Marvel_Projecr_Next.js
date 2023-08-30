@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from '../../styles//Pokemons.module.scss'
-
+import { useState } from "react";
 
 export const getStaticProps = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=30&offset=30');
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=10&offset=5`);
     const data = await response.json();
 
     if (!data) {
@@ -21,8 +21,18 @@ export const getStaticProps = async () => {
 }
 
 const Pokemons = ({pokemons}) => {
-  console.log(pokemons);
-const { results } = pokemons;
+  const [morePokemon, setMorePokemon] = useState(pokemons.results);
+  const [limit, setLimit] = useState(15);
+ 
+  console.log(morePokemon)
+
+const loadMore = async () => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=5`);
+    const data = await response.json();
+    setLimit(prevState => prevState + 5);
+    
+    setMorePokemon(data.results)
+}
     return (
       <>
       <Head>
@@ -30,7 +40,7 @@ const { results } = pokemons;
       </Head>
       
       <ul>
-        {results && results.map(({name}) => {
+        {morePokemon && morePokemon.map(({name}) => {
 
           let str = name;
           const newName = str => str.charAt(0).toUpperCase() + str.slice(1);
@@ -43,6 +53,7 @@ const { results } = pokemons;
           )
         })}
       </ul>
+      <button className={styles.bthLoadMore} type="button" onClick={() => loadMore()}>Load More</button>
       </>
     );
 };
