@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from '../../styles//Pokemons.module.scss'
 import { useState } from "react";
+import { animateScroll as scroll } from 'react-scroll';
 
 export const getStaticProps = async () => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=10&offset=5`);
@@ -30,6 +31,7 @@ const loadMore = async () => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=5`);
     const data = await response.json();
     setLimit(prevState => prevState + 5);
+    scroll.scrollToBottom();
     
     setMorePokemon(data.results)
 }
