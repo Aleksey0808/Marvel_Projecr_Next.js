@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
 import { RxMagnifyingGlass } from 'react-icons/rx'
-// import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 // import 'react-toastify/dist/ReactToastify.css'
 
 const schema = yup.object().shape({
@@ -10,14 +10,22 @@ const schema = yup.object().shape({
 
 const SearchPokemon = ({ onSubmit }) => {
   const handleSubmit = async ({ resetForm, query }) => {
-    if (!query.trim()) {
-      // toast.error('Enter a request!', { autoClose: 1500 })
-    } else {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query}`)
-      const data = await response.json()
-      onSubmit(data)
-      console.log(data)
-      resetForm()
+    try {
+      if (!query.trim()) {
+        toast.error('Enter a request!', { autoClose: 1500 })
+        console.log('if')
+      } else {
+        console.log('else')
+        const response = await fetch(
+          `https://pokeapi.co/api/v2/pokemon/${query}`,
+        )
+        const data = await response.json()
+        onSubmit(data)
+        resetForm()
+      }
+    } catch {
+      console.log('catch')
+      toast.error('Enter a request!', { autoClose: 1500 })
     }
   }
 

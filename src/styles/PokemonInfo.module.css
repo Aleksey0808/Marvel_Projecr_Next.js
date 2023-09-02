@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  padding: 10px 15px;
+  border: 2px solid grey;
+  width: 400px;
+  color: #fff;
+  max-height: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.wrapper {
+  background-image: url(../../public/bg-pokemon.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.name {
+  align-self: flex-start;
+  margin: 0;
+}
+
+.abilities {
+  align-self: flex-start;
+}
+
+.weight {
+  align-self: flex-start;
+}
+
+.btn {
+  margin-left: 50px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.1);
+}/*# sourceMappingURL=PokemonInfo.module.css.map */

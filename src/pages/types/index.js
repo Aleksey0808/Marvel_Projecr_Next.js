@@ -29,39 +29,41 @@ const Types = ({ types }) => {
       <Head>
         <title>Types</title>
       </Head>
+      <div className={styles.wrapper}>
+        <ul className={styles.list}>
+          {results &&
+            results.map(({ name }) => {
+              let str = name
+              const newName = (str) =>
+                str.charAt(0).toUpperCase() + str.slice(1)
+              // console.log(str)
+              // console.log(newName(str) === icon.src)
 
-      <ul className={styles.list}>
-        {results &&
-          results.map(({ name }) => {
-            let str = name
-            const newName = (str) => str.charAt(0).toUpperCase() + str.slice(1)
-            // console.log(str)
-            // console.log(newName(str) === icon.src)
-
-            return (
-              <li key={name} className={styles.item}>
-                {newName(str)}
-                {icon.map(({ src, name }) => {
-                  // console.log(src)
-                  if (name === newName(str)) {
-                    return (
-                      <Image
-                        key={src}
-                        src={src}
-                        width={150}
-                        height={150}
-                        alt={name}
-                      />
-                    )
-                  }
-                })}
-                <Link className={styles.link} href={`/types/${name}`}>
-                  <button className={styles.btn}>Info</button>
-                </Link>
-              </li>
-            )
-          })}
-      </ul>
+              return (
+                <li key={name} className={styles.item}>
+                  {newName(str)}
+                  {icon.map(({ src, name }) => {
+                    // console.log(src)
+                    if (name === newName(str)) {
+                      return (
+                        <Image
+                          key={src}
+                          src={src}
+                          width={150}
+                          height={150}
+                          alt={name}
+                        />
+                      )
+                    }
+                  })}
+                  <Link className={styles.link} href={`/types/${name}`}>
+                    <button className={styles.btn}>Info</button>
+                  </Link>
+                </li>
+              )
+            })}
+        </ul>
+      </div>
     </>
   )
 }
