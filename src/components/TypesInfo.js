@@ -17,11 +17,9 @@ const TypesInfo = ({ type }) => {
         {' '}
         &#8592; Go back
       </button>
-      {/* <div className={styles.container}> */}
       <ul className={styles.list}>
         {type &&
           type.map(({ pokemon }) => {
-            // console.log(pokemon)
             const { name } = pokemon;
             let str = name;
             const newName = str => str.charAt(0).toUpperCase() + str.slice(1);

@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-weight: 700;
+  background-color: rgba(189, 173, 173, 0.2);
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.logoRed {
+  color: #9F0013;
+}/*# sourceMappingURL=Header.module.css.map */

@@ -6,7 +6,11 @@
   
     .links {
       font-size: 24px;
-      font-weight: 700
+      font-weight: 700;   
+     }
+
+    .link {
+      margin-right: 10px;
     }
   
     a {
@@ -19,6 +23,7 @@
       &.active,
       &:hover {
         color: #9F0013;
+        margin-right: 10px;
       }
     }
 

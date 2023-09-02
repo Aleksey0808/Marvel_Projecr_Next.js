@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column; */
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   background-image: url(../../public/bg-asset.png), url(../../public/bg-home.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 250px 250px, cover;
-  background-position: 100% 75%, center;
+  background-position: 100% 85%, center;
   z-index: 100;
 }/*# sourceMappingURL=Home.module.css.map */
