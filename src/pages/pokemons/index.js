@@ -36,23 +36,26 @@ const Pokemons = ({ pokemons }) => {
       <Head>
         <title>Pokemons</title>
       </Head>
+      <div className={styles.wrapper}>
+        <ul className={styles.list}>
+          {morePokemon &&
+            morePokemon.map(({ name }) => {
+              let str = name
+              const newName = (str) =>
+                str.charAt(0).toUpperCase() + str.slice(1)
 
-      <ul className={styles.list}>
-        {morePokemon &&
-          morePokemon.map(({ name }) => {
-            let str = name
-            const newName = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+              return (
+                <li key={name} className={styles.item}>
+                  {newName(str)}
+                  <Link className={styles.link} href={`/pokemons/${name}`}>
+                    <button className={styles.btn}>Info</button>
+                  </Link>
+                </li>
+              )
+            })}
+        </ul>
+      </div>
 
-            return (
-              <li key={name} className={styles.item}>
-                {newName(str)}
-                <Link className={styles.link} href={`/pokemons/${name}`}>
-                  <button className={styles.btn}>Info</button>
-                </Link>
-              </li>
-            )
-          })}
-      </ul>
       <LoadMorePokemon getPokemon={getPokemon} />
     </>
   )
