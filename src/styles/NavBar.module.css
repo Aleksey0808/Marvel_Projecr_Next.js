@@ -1,0 +1,28 @@
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .links {
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav .link {
+  margin-right: 10px;
+}
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav a.active, .nav a:hover {
+  color: #9F0013;
+  margin-right: 10px;
+}
+.nav .delimiter {
+  font-size: 24px;
+  font-weight: 700;
+}/*# sourceMappingURL=NavBar.module.css.map */

@@ -1,3 +1,4 @@
+import styles from '../styles/LoadMore.module.scss'
 import { animateScroll as scroll } from 'react-scroll'
 import { useState } from 'react'
 
@@ -17,9 +18,11 @@ const LoadMorePokemon = ({ getPokemon }) => {
 
   return (
     <>
-      <button type="button" onClick={loadMore}>
-        Load More
-      </button>
+      <div className={styles.wrapper}>
+        <button className={styles.button} type="button" onClick={loadMore}>
+          Load More
+        </button>
+      </div>
     </>
   )
 }

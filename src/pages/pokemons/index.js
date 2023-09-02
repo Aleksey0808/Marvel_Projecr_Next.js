@@ -54,9 +54,8 @@ const Pokemons = ({ pokemons }) => {
               )
             })}
         </ul>
+        <LoadMorePokemon getPokemon={getPokemon} />
       </div>
-
-      <LoadMorePokemon getPokemon={getPokemon} />
     </>
   )
 }
