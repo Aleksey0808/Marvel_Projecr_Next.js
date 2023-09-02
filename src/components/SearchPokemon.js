@@ -9,22 +9,21 @@ const schema = yup.object().shape({
 })
 
 const SearchPokemon = ({ onSubmit }) => {
-  const handleSubmit = async ({ resetForm, query }) => {
+  const handleSubmit = async ({query}, {resetForm}) => {
     try {
       if (!query.trim()) {
         toast.error('Enter a request!', { autoClose: 1500 })
-        console.log('if')
       } else {
-        console.log('else')
         const response = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${query}`,
         )
         const data = await response.json()
         onSubmit(data)
         resetForm()
+        toast.success('Here your pokemon', { autoClose: 1500 })
       }
-    } catch {
-      console.log('catch')
+    } catch (e) {
+      console.log(e)
       toast.error('Enter a request!', { autoClose: 1500 })
     }
   }
