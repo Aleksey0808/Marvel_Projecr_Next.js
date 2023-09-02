@@ -8,7 +8,8 @@ const TypesInfo = ({ type }) => {
 
   return (
     <>
-      <button
+      <div className={styles.wrapper}>
+        <button
         className={styles.btn}
         type="button"
         onClick={() => router.back()}
@@ -39,6 +40,8 @@ const TypesInfo = ({ type }) => {
             )
           })}
       </ul>
+      </div>
+      
     </>
   )
 }
