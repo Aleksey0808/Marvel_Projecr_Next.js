@@ -17,7 +17,7 @@ const TypesInfo = ({ type }) => {
         {' '}
         &#8592; Go back
       </button>
-      <ul className={styles.list}>
+      {type.length === 0 ? <h1 className={styles.error}>No Pokemons in this list</h1> : <ul className={styles.list}>
         {type &&
           type.map(({ pokemon }) => {
             const { name } = pokemon;
@@ -37,7 +37,7 @@ const TypesInfo = ({ type }) => {
               </li>
             )
           })}
-      </ul>
+      </ul>}
       </div>
       
     </>
