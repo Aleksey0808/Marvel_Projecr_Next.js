@@ -43,7 +43,11 @@ const SearchPokemon = ({ onSubmit }) => {
       >
         <Form className={styles.form}>
           <label >
-            <Field type="text" name="query" className={styles.input} />
+            <Field 
+            type="text" 
+            name="query" 
+            placeholder="Enter Pokemon Name"
+            className={styles.input} />
             <ErrorMessage name="query" component="div" className={styles.error} />
           </label>
 

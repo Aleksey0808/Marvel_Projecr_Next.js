@@ -61,6 +61,10 @@
     padding: 10px 15px;
     background-color: transparent;
     color: white;
+
+    &::placeholder {
+        color: white;
+    }
 }
 .error {
     margin-top: 5px;
