@@ -3,7 +3,7 @@ import styles from '../styles/TypesInfo.module.scss'
 import { useRouter } from 'next/navigation'
 
 const TypesInfo = ({ type }) => {
-  // console.log(type);
+  console.log(type);
   const router = useRouter()
 
   return (
@@ -17,7 +17,7 @@ const TypesInfo = ({ type }) => {
         {' '}
         &#8592; Go back
       </button>
-      {type ? <h1 className={styles.error}>No Pokemons in this list</h1> : <ul className={styles.list}>
+      <ul className={styles.list}>
         {type &&
           type.map(({ pokemon }) => {
             const { name } = pokemon;
@@ -37,7 +37,7 @@ const TypesInfo = ({ type }) => {
               </li>
             )
           })}
-      </ul>}
+      </ul>
       </div>
       
     </>
