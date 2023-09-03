@@ -1,0 +1,56 @@
+.container {
+    width: 400px;
+    padding: 10px 15px;
+    text-align: center;
+}
+.name {
+    color: yellow;
+}
+
+.input {
+    font-size: 18px;
+    width: 280px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: white;
+}
+.error {
+    margin-top: 5px;
+    color: white;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    font-size: 18px;
+    width: 75px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: #9F0013;
+    cursor: pointer;
+    color: white;
+    transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+
+}
+
+.flowtext .tn-atom {
+    background: linear-gradient(90deg, #e933ff, #ffb400, #ff3333, #334dff, #e933ff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textflow 5s linear infinite;
+  }
+  @keyframes textflow {
+    from {background-position: 0% center}         
+    to {background-position: 200% center}
+  }

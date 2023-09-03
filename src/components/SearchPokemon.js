@@ -1,7 +1,8 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as yup from 'yup'
-import { RxMagnifyingGlass } from 'react-icons/rx'
-import { toast } from 'react-toastify'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as yup from 'yup';
+import { RxMagnifyingGlass } from 'react-icons/rx';
+import { toast } from 'react-toastify';
+import styles from "../styles/SearchPokemon.module.scss";
 // import 'react-toastify/dist/ReactToastify.css'
 
 const schema = yup.object().shape({
@@ -33,25 +34,25 @@ const SearchPokemon = ({ onSubmit }) => {
   }
 
   return (
-    <>
-      {/* <ToastContainer /> */}
+    <div className={styles.container}>
+      <h1 className={styles.name}>Search Your Pokemon</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={schema}
       >
-        <Form>
-          <label>
-            <Field type="text" name="query" />
-            <ErrorMessage name="query" component="div" />
+        <Form className={styles.form}>
+          <label >
+            <Field type="text" name="query" className={styles.input} />
+            <ErrorMessage name="query" component="div" className={styles.error} />
           </label>
 
-          <button type="submit">
+          <button type="submit" className={styles.btn}>
             <RxMagnifyingGlass />
           </button>
         </Form>
       </Formik>
-    </>
+    </div>
   )
 }
 

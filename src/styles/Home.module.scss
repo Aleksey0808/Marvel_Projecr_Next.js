@@ -1,10 +1,9 @@
 .wrapper {
   min-height: 100%;
-  /* display: flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  flex-direction: column; */
-  padding: 20px 20px 0 20px;
+  flex-direction: column; 
+  padding: 40px 20px 20px 20px;
 
   background-image: url(../../public/bg-asset.png), url(../../public/bg-home.jpg);
   background-repeat: no-repeat;
