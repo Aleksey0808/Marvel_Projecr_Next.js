@@ -12,8 +12,6 @@ const PokemonInfo = ({ pokemon }) => {
   const pokemonAbilyty = abilities.map((ability) => ability.ability.name)
   const abilitysList = pokemonAbilyty.join('/')
 
-  console.log(pokemonAbilyty)
-
   return (
     <>
       <div className={styles.wrapper}>
