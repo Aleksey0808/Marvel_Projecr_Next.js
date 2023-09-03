@@ -17,7 +17,9 @@ const Error = () => {
       <Head>
         <title>Error</title>
       </Head>
-      <p>Error</p>
+      <div className={styles.wrapper}>
+        <p className={styles.textError}>There is no such page!</p>
+      </div>
     </>
   )
 }
