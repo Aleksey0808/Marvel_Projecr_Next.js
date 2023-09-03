@@ -4,7 +4,31 @@
     text-align: center;
 }
 .name {
+    animation: beat 3s infinite;
+    transition: all 3000ms ease-in-out;
+   
+@keyframes beat {
+  0%
+  {
+    color: rgba(171,10,29,0.72);
+  }
+  25%
+  {
+    color: white;
+  }
+  50%
+  {
+    color: black;
+  }
+  75%
+  {
+    color: #1976d2;
+  }
+  100%
+  {
     color: yellow;
+  }
+}
 }
 
 .input {
