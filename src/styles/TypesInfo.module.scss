@@ -12,6 +12,7 @@
 }
 
 .wrapper {
+  height: 100%;
   background-image: url(../../public/bg-type.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -81,4 +82,10 @@
     &:focus {
       transform: scale(1.1);
     }
+  }
+
+  .error {
+    font-size: 24px;
+    color: white;
+    text-align: center;
   }
